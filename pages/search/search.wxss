@@ -1,0 +1,20 @@
+.search > .search-input {
+  height: 58rpx;
+  padding: 12rpx;
+  background-color: #f8f8f8;
+}
+.search > .search-input > input {
+  display: block;
+  height: 58rpx;
+  padding-left: 4px;
+  background-color: #fff;
+}
+.search > .hot-city {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 8px;
+}
+.search > .hot-city > button {
+  margin: 16rpx 8rpx 0;
+  font-weight: 400;
+}

@@ -1,0 +1,54 @@
+.notice {
+  background-color: #fff;
+  white-space: nowrap;
+  line-height: 48rpx;
+  text-align: right;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.home {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  padding: 24rpx;
+  font-size: 32rpx;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.home > .user {
+  padding: 24rpx;
+  margin-top: 24rpx;
+  border-radius: 4rpx;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.home > .user > image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.home > .weather {
+  padding: 24rpx;
+  margin-top: 24rpx;
+  border-radius: 4rpx;
+  background-color: #fff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.home > .weather > .weather-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+.home > .weather > .weather-top > .wendu {
+  font-size: 120rpx;
+  line-height: 1;
+}
+.home > .weather > .weather-top > .wendu > .unit {
+  font-size: 48rpx;
+}
+.home > .weather > .weather-bottom > view {
+  line-height: 2;
+}

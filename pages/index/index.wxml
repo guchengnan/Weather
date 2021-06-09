@@ -1,0 +1,26 @@
+<view class="notice">
+  <text>更新时间：{{ weatherInfo.obsTime }}</text>
+</view>
+<view class="home">
+  <view class="user">
+    <image src="{{ userInfo.avatarUrl }}"></image>
+    <text>{{ userInfo.nickName}}</text>
+  </view>
+  <view class="weather">
+    <view class="weather-top">
+      <view class="wendu">
+        <text class="value">{{ weatherInfo.temp }}</text>
+        <text class="unit">°C</text>
+      </view>
+      <view class="city" bindtap="jumpSearch">{{ weatherInfo.cityName }}</view>
+    </view>
+    <view class="weather-bottom">
+      <view>天气：{{ weatherInfo.text }}</view>
+      <view>风力：{{ weatherInfo.windScale }}级{{ weatherInfo.windDir }}</view>
+      <view>湿度：{{ weatherInfo.humidity }}%</view>
+      <view>气压：{{ weatherInfo.pressure }}hPa</view>
+      <view>降水量：{{ weatherInfo.precip }}mm</view>
+      <view>能见度：{{ weatherInfo.dew }}KM</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+<view class="search">
+  <view class="search-input">
+    <input type="text" placeholder="请输入城市名称" focus confirm-type="search" bindconfirm="getWeather" />
+  </view>
+  <view class="hot-city">
+    <button size="mini" wx:for="{{ hotCity }}" wx:key="key" data-city="{{ item.name }}" bindtap="getWeather">{{ item.name }}</button>
+  </view>
+</view>
