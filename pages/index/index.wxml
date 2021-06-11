@@ -4,7 +4,10 @@
 <view class="home">
   <view class="user">
     <image src="{{ userInfo.avatarUrl }}"></image>
-    <text>{{ userInfo.nickName}}</text>
+    <view>
+      <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+      <text wx:else>{{ userInfo.nickName}}</text>
+    </view>
   </view>
   <view class="weather">
     <view class="weather-top">

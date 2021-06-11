@@ -1,31 +1,26 @@
 // index.js
 // 获取应用实例
 const app = getApp()
-
 import { formatTime } from '../../utils/util'
 
 Page({
   data: {
+    canIUse: true,
     // 用户信息
     userInfo: {},
     // 天气信息
     weatherInfo: {}
   },
   // 事件处理函数
-  onLoad() {
-    this.getUserInfo()
-  },
+  onLoad() {},
   onShow() {
     this.getWeather()
   },
-  getUserInfo() {
-    wx.getUserInfo({
-      success: (res) => {
-        const { userInfo } = res
-        this.setData({
-          userInfo
-        })
-      }
+  bindGetUserInfo (e) {
+    const { userInfo } = e.detail
+    this.setData({
+      userInfo,
+      canIUse: false
     })
   },
   getWeather() {
