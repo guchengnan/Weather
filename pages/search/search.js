@@ -1,4 +1,9 @@
 // pages/search/search.js
+const QQMapWX = require('../../libs/qqmap-wx-jssdk.js')
+let qqmapsdk = new QQMapWX({
+  key: '6KHBZ-N3ZRU-KV4VG-BKRUE-VQT75-OQBZW'
+});
+
 Page({
   /**
    * 页面的初始数据
@@ -28,7 +33,31 @@ Page({
     },{
       name: '成都',
       key: 'chengdu'
-    }]
+    }],
+    longitude: null,
+    latitude: null,
+    markers: []
+  },
+  onLoad(options) {
+    this.setData({
+      ...options,
+      markers: [{
+        id: 1,
+        ...options
+      }]
+    })
+  },
+  onShow(options) {
+    this.getCityList()
+  },
+  // 获取城市列表
+  getCityList() {
+    qqmapsdk.getCityList({
+      success: res => {},
+      fail: function(error) {
+        console.error(error);
+      }
+    })
   },
   // 搜索事件
   getWeather(e) {

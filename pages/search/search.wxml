@@ -5,4 +5,7 @@
   <view class="hot-city">
     <button size="mini" wx:for="{{ hotCity }}" wx:key="key" data-city="{{ item.name }}" bindtap="getWeather">{{ item.name }}</button>
   </view>
+  <view class="map">
+    <map longitude="{{ longitude }}" latitude="{{ latitude }}" markers="{{ markers }}"></map>
+  </view>
 </view>

@@ -5,7 +5,10 @@
   <view class="user">
     <image src="{{ userInfo.avatarUrl }}"></image>
     <view>
-      <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+      <block wx:if="{{!hasUserInfo}}">
+        <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+        <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      </block>
       <text wx:else>{{ userInfo.nickName}}</text>
     </view>
   </view>

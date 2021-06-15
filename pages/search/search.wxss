@@ -18,3 +18,10 @@
   margin: 16rpx 8rpx 0;
   font-weight: 400;
 }
+.search > .map {
+  padding: 8px;
+}
+.search > .map > map {
+  width: 100%;
+  height: 580rpx;
+}
