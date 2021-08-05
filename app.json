@@ -9,11 +9,5 @@
     "navigationBarTitleText": "祥云气象",
     "navigationBarTextStyle":"white"
   },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json",
-  "permission": {
-    "scope.userLocation": {
-      "desc": " "
-    }
-  }
+  "sitemapLocation": "sitemap.json"
 }

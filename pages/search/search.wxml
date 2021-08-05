@@ -1,11 +1,5 @@
-<view class="search">
-  <view class="search-input">
-    <input type="text" placeholder="请输入城市名称" focus confirm-type="search" bindconfirm="getWeather" />
-  </view>
-  <view class="hot-city">
-    <button size="mini" wx:for="{{ hotCity }}" wx:key="key" data-city="{{ item.name }}" bindtap="getWeather">{{ item.name }}</button>
-  </view>
-  <view class="map">
-    <map longitude="{{ longitude }}" latitude="{{ latitude }}" markers="{{ markers }}"></map>
-  </view>
-</view>
+<van-sticky>
+  <van-search value="{{cityName}}" shape="round" background="#4a62e7" placeholder="请输入搜索关键词" bind:search="onSearch" />
+</van-sticky>
+<van-divider wx:if="{{!resultList.length}}" contentPosition="center">暂无内容</van-divider>
+<van-cell wx:for="{{resultList}}" wx:key="index" title="{{item.provinceZh}} {{item.leaderZh}} {{item.cityZh}}" is-link data-action="{{item}}" bind:click="onClickCell"/>

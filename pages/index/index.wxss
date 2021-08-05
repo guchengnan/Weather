@@ -1,54 +1,64 @@
-.notice {
-  background-color: #fff;
-  white-space: nowrap;
-  line-height: 48rpx;
-  text-align: right;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
 .home {
   width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  padding: 24rpx;
-  font-size: 32rpx;
-  box-sizing: border-box;
-  background-color: #f9f9f9;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  min-height: 100vh;
+  background-color: #F7F8FA;
 }
-.home > .user {
-  padding: 24rpx;
-  margin-top: 24rpx;
-  border-radius: 4rpx;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+
+.home>image {
+  width: 100vw;
+  vertical-align: top;
+  box-shadow: 0 0 1px #4a62e7 inset;
 }
-.home > .user > image {
-  width: 120rpx;
-  height: 120rpx;
-  border-radius: 50%;
+
+.home>.container {
+  width: 686rpx;
+  margin: 0 auto;
+  transform: translateY(-395rpx);
 }
-.home > .weather {
-  padding: 24rpx;
-  margin-top: 24rpx;
-  border-radius: 4rpx;
-  background-color: #fff;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+.home>.container>.summary {
+  height: 300rpx;
+  padding: 100rpx 67rpx 0;
 }
-.home > .weather > .weather-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #eee;
-}
-.home > .weather > .weather-top > .wendu {
-  font-size: 120rpx;
-  line-height: 1;
-}
-.home > .weather > .weather-top > .wendu > .unit {
+
+.home>.container>.summary>.title {
   font-size: 48rpx;
+  color: #FFFFFF;
 }
-.home > .weather > .weather-bottom > view {
+
+.home>.container>.summary>.subtitle {
+  opacity: 0.8;
+  font-size: 32rpx;
+  color: #FFFFFF;
+  line-height: 2;
+}
+
+.home>.container>.column {
+  background: #FFFFFF;
+  box-shadow: 0 6px 24px 0 rgba(6, 13, 97, 0.10);
+  border-radius: 4px;
+  margin-bottom: 24rpx;
+  padding: 25rpx 50rpx 30rpx;
+  color: #1A1B1F;
+}
+
+.home>.container>.column>.title {
+  display: flex;
+  height: 72rpx;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #F2F5FB;
+}
+.home>.container>.column>.title>.city{
+  color: #000;
+  font-size: 36rpx;
+}
+.home>.container>.column>.title>.date{
+  font-size: 24rpx;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.home>.container>.column>.subtitle {
+  font-size: 28rpx;
   line-height: 2;
 }
